@@ -9,7 +9,7 @@ services:
     ports:
       - 3000:3000
     environment:
-    - NEXT_PUBLIC_API_URL=http://localhost:4000
+    - NEXT_PUBLIC_API_URL=http://localhost:4001
     depends_on:
       - flaskapp
 
@@ -21,7 +21,7 @@ services:
       context: ./backend
       dockerfile: flask.dockerfile
     ports:
-      - 4000:4000
+      - 4001:4001
     environment:
       - DATABASE_URL=postgresql://postgres:postgres@db:5432/postgres
     depends_on:
